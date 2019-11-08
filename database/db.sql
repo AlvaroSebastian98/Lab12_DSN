@@ -1,7 +1,7 @@
 -- CREATE DATABASE db_links;
 
--- USE db_links;
-USE heroku_5e9a53f250f17f8;
+USE agenda;
+-- USE heroku_5e9a53f250f17f8;
 
 -- TABLE USER
 -- all pasword wil be encrypted using SHA1
@@ -26,22 +26,39 @@ INSERT INTO users (id, username, password, fullname)
 SELECT * FROM users;
 
 -- LINKS TABLE
-CREATE TABLE links (
+-- CREATE TABLE links (
+--   id INT(11) NOT NULL,
+--   nombre VARCHAR(150) NOT NULL,
+--   precio VARCHAR(255) NOT NULL,
+--   categoria VARCHAR(255) NOT NULL,
+--   descripcion TEXT,
+--   imagen VARCHAR(300) NOT NULL,
+--   user_id INT(11),
+--   created_at timestamp NOT NULL DEFAULT current_timestamp,
+--   CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id)
+-- );
+
+-- ALTER TABLE links
+--   ADD PRIMARY KEY (id);
+
+-- ALTER TABLE links
+--   MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+
+-- -- DESCRIBE links;
+
+CREATE TABLE contacts (
   id INT(11) NOT NULL,
-  nombre VARCHAR(150) NOT NULL,
-  precio VARCHAR(255) NOT NULL,
-  categoria VARCHAR(255) NOT NULL,
-  descripcion TEXT,
-  imagen VARCHAR(300) NOT NULL,
-  user_id INT(11),
-  created_at timestamp NOT NULL DEFAULT current_timestamp,
-  CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id)
+  nombre VARCHAR(30) NOT NULL,
+  apellidos VARCHAR(30) NOT NULL,
+  numero VARCHAR(16) NOT NULL,
+  correo VARCHAR(30) NOT NULL,
+  fecha_nac DATE NOT NULL,
+  foto VARCHAR(300),
+  user_id INT(11)
 );
 
-ALTER TABLE links
+ALTER TABLE contacts
   ADD PRIMARY KEY (id);
 
-ALTER TABLE links
+ALTER TABLE contacts
   MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
-
--- DESCRIBE links;

@@ -4,20 +4,24 @@
         <div class="card-body">
             <form action="/links/edit/{{link.id}}" method="POST">
                 <div class="form-group">
-                    <input type="text" name="nombre" class="form-control" placeholder="Title" value="{{link.nombre}}" autofocus>
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{link.nombre}}" autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="precio" class="form-control" placeholder="URL" value="{{link.precio}}">
+                    <input type="text" name="apellidos" class="form-control" placeholder="Apellidos" value="{{link.apellidos}}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="categoria" class="form-control" placeholder="URL" value="{{link.categoria}}">
+                    <input type="text" name="numero" class="form-control" placeholder="Numero" value="{{link.numero}}">
                 </div>
                 <div class="form-group">
-                    <textarea name="descripcion" rows="2" class="form-control" placeholder="Description">{{link.descripcion}}</textarea>
+                    <input type="text" name="correo" class="form-control" placeholder="Correo" value="{{link.correo}}">
                 </div>
                 {{!-- <div class="form-group">
-                    <input type="text" name="imagen" class="form-control" placeholder="url imagen" value="{{link.imagen}}">
-                </div>                 --}}
+                    <input type="text" name="fecha_nac" class="form-control" placeholder="Fecha nacimiento" value="{{link.fecha_nac}}">
+                </div> --}}
+                {{!-- <input type="text" hidden name="imagenUrl" value="{{link.imagen}}"> --}}
+                 {{!-- <div class="form-group">
+                    <input type="file" name="imagen">
+                </div> --}}
                 <div class="form-group">
                     <button class="btn btn-success btn-block">
                         Guardar

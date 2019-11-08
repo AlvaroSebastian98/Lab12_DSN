@@ -4,28 +4,25 @@
 
             <div class="card">
                 <div class="card-body">
-                    <form action="/links/add" method="POST" >
+                    <form action="/links/add" method="POST">
                         <div class="form-group">
                             <input type="text" name="nombre" class="form-control" placeholder="Nombre" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="precio" class="form-control" placeholder="Precio">
+                            <input type="text" name="apellidos" class="form-control" placeholder="Apellidos">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="categoria" class="form-control" placeholder="Categoría">
+                            <input type="text" name="numero" class="form-control" placeholder="Número">
                         </div>
-                        {{!-- <div class="form-group">
-                            <input type="url" name="url" class="form-control" placeholder="URL">
-                        </div>                         --}}
                         <div class="form-group">
-                            <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripción"></textarea>
+                            <input type="email" name="correo" class="form-control" placeholder="Correo">
                         </div>
                         {{!-- <div class="form-group">
-                            <input type="file" name="image">
+                            <input type="date" name="fecha_nac" class="form-control" placeholder="Fecha de nacimiento">
                         </div> --}}
-                        <div class="form-group">
-                            <input type="text" name="imagen" class="form-control" placeholder="Pega la dirección local de tu foto">
-                        </div>
+                        {{!-- <div class="form-group">
+                            <input type="file" name="imagen">
+                        </div> --}}
                         <div class="form-group">
                             {{!-- <button class="btn btn-success btn-block">
                                 Guardar
