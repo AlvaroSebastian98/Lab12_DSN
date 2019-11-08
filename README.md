@@ -1,1 +1,1 @@
-# Practica 2 DSN
+# Lab12 DSN
